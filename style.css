@@ -3,25 +3,27 @@
     padding: 0;
 
 }
-
-.main{
+.header{
+    min-height: 100vh;
     width: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%), url(Crypto-Desktop-Background-1024x576.jpg);
+    background: linear-gradient(to top, rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(sch\ theme.jpg);
     background-position: center;
     background-size: cover;
-    height: 109vh;
+    position: relative;
 }
 
-.navbar{
-    width: 1200px;
-    height: 75px;
-    margin: auto;
+.nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .icon{
     width: 200px;
     float: left;
     height: 70px;
+    margin: left;
 }
 
 .logo{
@@ -34,28 +36,23 @@ padding-top: 10px;
 
 }
 
-.menu{
-    width: 400px;
-    float: left;
-    height: 70px;
+.nav-links{
+    flex: 1;
+    text-align: right;
 }
 
-ul{
-    float: left;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-ul li{
+
+.nav-links ul li{
     list-style: none;
-    margin-left: 62px;
-    margin-top: 27px;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
     font-size: 14px;
 
 }
 
-ul li a{
+.nav-links ul li a{
     text-decoration: none;
     color: white;
     font-family: Arial;
@@ -63,51 +60,10 @@ ul li a{
     transition: 0.4s ease-in-out;
 }
 
-ul li a:hover{
+.nav-links ul li a:hover{
     color: aqua;
 }
 
-.search{
-    width: 330px;
-    float: left;
-    margin-left: 270px;
-}
-
-.srch{
-    font-family: 'Calibri';
-    width: 200px;
-    height: 40px;
-    background: transparent;
-    border: 1px solid aqua;
-      margin-top: 13px;
-      color: white;
-      border-right: none;
-      font-size: 16px;
-      float: left;
-      padding: 10px;
-      border-bottom: 5px;
-      border-top-left-radius: 5px;
-}
-
-.btn{
-    width: 100px;
-    height: 40px;
-    background: aqua;
-    border: 2px solid aqua;
-    margin-top: 13px;
-    color: white;
-    font-size: 15px;
-    border-bottom-right-radius: 5px;
-    border-top-right-radius: 5px;
-    cursor: pointer;
-}
-.btn:focus{
-    outline: none;
-}
-
-.srch:focus{
-    outline: none;
-}
 
 .content{
     width: 1200px;
@@ -157,6 +113,33 @@ ul li a:hover{
     color: aqua;
     font-size: 60px;
 }
+@media(max-width: 700px){
+    .content h1{
+        font-size: 15px;
+    }
+    .content{
+        width: 500px;
+        height: auto;
+        margin: auto;
+        color: white;
+        position: absolute;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: aqua;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0;
+        text-align: left;
+        z-index: 2;
+    }
+    
+}
+
 .form{
     width: 250px;
     height: 380px;
@@ -286,7 +269,7 @@ ul li a:hover{
     margin-bottom: 5px;
 }
 
-.Services{
+.Courses{
         width: 80%;
         margin: auto;
         text-align: center;
@@ -310,12 +293,12 @@ ul li a:hover{
     display: flex;
     justify-content: space-between;
 }
-.Services-col{
+.Courses-col{
     flex-basis: 31%;
     background: lightgreen;
     border-radius: 10px;
     margin-bottom: 5%;
-    padding: 20px 12px;
+    padding: 20px 16px;
     box-sizing: border-box;
     transition: 0.5s;
 }
@@ -324,7 +307,7 @@ ul li a:hover{
     font-weight: 600;
     margin: 10px 0;
 }
-.Services-col:hover{
+.Courses-col:hover{
     box-shadow: 0 0 20px 0px black;
 }
 .crypto.image{
@@ -350,20 +333,20 @@ ul li a:hover{
     bottom: 5;
     transition: left 2s ease;
 }
-.Offices{
+.Classrooms{
     width:auto;
     margin: auto;
     text-align: center;
     padding-top: 550px;
 }
-.Offices-col{
+.Classrooms-col{
     flex-basis: 32%;
     border-radius: 10px;
     margin-bottom: 30px;
     position: relative;
     overflow: hidden;
 }
-.Offices-col img{
+.Classrooms-col img{
     width: 100%;
     display: block;
 
@@ -410,6 +393,13 @@ ul li a:hover{
     margin-bottom: 40px;
     padding: 0;
 }
+
+@media(max-width: 700px){
+    .cta h1{
+        font-size: 20px;
+    }
+}
+
 .hero-btn{
     display: inline-block;
     text-decoration: none;
@@ -439,7 +429,7 @@ ul li a:hover{
 .sub-header{
     height: 50vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,930,0.7),rgba(4,9,30,0.7)),url(AB.image.jpeg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(photo_2024-03-15_09-49-49.jpg);
     background-position: center;
     background-size: cover;
     text-align: center;
@@ -460,11 +450,14 @@ ul li a:hover{
 }
 .about-col img{
     width: 100%;
+    height: 80%;
 }
 .about-col h1{
     padding-top: 0;
+    color: aqua;
 }
 .about-col p{
+    font-size: 20px;
     padding: 15px 0 25px;
 }
 .red-btn{
@@ -477,6 +470,7 @@ ul li a:hover{
     width: 80%;
     margin: auto;
     padding: 60px 0;
+    line-height: normal;
 }
 .blog-left{
     flex-basis: 65%;
